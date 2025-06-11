@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidQuest1</string>
+    <string name="user_posted">UserID %1$d posted</string>
 </resources>

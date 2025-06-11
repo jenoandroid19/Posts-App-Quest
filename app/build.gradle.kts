@@ -2,6 +2,10 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlinx.serialization)
+    alias(libs.plugins.kotlin.kapt)
+    id("com.google.devtools.ksp")
+    id("com.google.dagger.hilt.android")
 
 }
 
@@ -56,15 +60,19 @@ dependencies {
     implementation(libs.compose.viewmodel)
     implementation(libs.dagger.hilt.android)
     implementation(libs.androidx.appcompat)
-//    kapt(libs.dagger.hilt.compiler)
+    kapt(libs.dagger.hilt.compiler)
     implementation(libs.android.hilt.navigation.compose)
     implementation(libs.android.hilt.navigation.fragment)
-//    kapt(libs.android.hilt.compiler)
+    kapt(libs.android.hilt.compiler)
 
     implementation(libs.room.ktx)
-//    kapt(libs.room.compiler)
+    kapt(libs.room.compiler)
 
 
+//    ksp("com.google.dagger:hilt-android-compiler:2.56.2")
+    kapt("android.arch.persistence.room:compiler:1.1.1")
+
+    kapt(libs.dagger.hilt.compiler)
     implementation(libs.retrofit)
     implementation(libs.retrofit.gson)
     implementation(libs.okhttp)

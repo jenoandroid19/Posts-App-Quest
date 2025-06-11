@@ -41,6 +41,7 @@ okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhtt
 compose-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "compose-viewmodel"}
 dagger-hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "dagger-hilt"}
 dagger-hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "dagger-hilt"}
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "dagger-hilt" }
 room-ktx = { group = "androidx.room", name  = "room-ktx", version.ref = "room"}
 room-compiler = { group = "androidx.room", name  = "room-compiler", version.ref = "room"}
 android-hilt-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "android-hilt"}
