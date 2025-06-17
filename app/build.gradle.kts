@@ -69,13 +69,11 @@ dependencies {
     kapt(libs.room.compiler)
 
 
-//    ksp("com.google.dagger:hilt-android-compiler:2.56.2")
-    kapt("android.arch.persistence.room:compiler:1.1.1")
-
     kapt(libs.dagger.hilt.compiler)
     implementation(libs.retrofit)
     implementation(libs.retrofit.gson)
     implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

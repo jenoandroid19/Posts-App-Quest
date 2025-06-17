@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.dp
 import com.jeno.androidquest1.R
 import com.jeno.androidquest1.presentation.ui.compose.CommonHeader
 import com.jeno.androidquest1.presentation.ui.compose.CommonLoader
-import com.jeno.androidquest1.presentation.ui.compose.RowItem
+import com.jeno.androidquest1.presentation.ui.compose.MyListItemUI
 
 @Composable
 fun PostListingScreen(
@@ -48,7 +48,7 @@ fun PostListingScreen(
                 itemsIndexed(items = state.posts,
                     key = { _, post -> post.id }
                 ) { _, post ->
-                    RowItem(
+                    MyListItemUI(
                         post = post,
                         clickEvent = {
                             onPostClicked(post.id)

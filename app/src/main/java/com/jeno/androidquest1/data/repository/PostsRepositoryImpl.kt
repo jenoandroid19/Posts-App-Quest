@@ -2,7 +2,7 @@ package com.jeno.androidquest1.data.repository
 
 import com.jeno.androidquest1.data.remote.dao.PostsDao
 import com.jeno.androidquest1.repository.PostsRepository
-import com.jeno.androidquest1.data.remote.api.PostsAPI
+import com.jeno.androidquest1.data.remote.api.ApiService
 import com.jeno.androidquest1.data.remote.api.model.Posts
 import com.jeno.androidquest1.data.remote.entity.PostEntity
 import com.jeno.androidquest1.runSuspendCatching
@@ -10,11 +10,11 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class PostsRepositoryImpl @Inject constructor(
-    private val postsAPI: PostsAPI,
+    private val apiService: ApiService,
     private val postsDao: PostsDao
 ): PostsRepository {
     override suspend fun fetchPostsAndStore(): Result<Unit> {
-        return postsAPI.runSuspendCatching {
+        return apiService.runSuspendCatching {
             getPosts()
         }.mapCatching { response ->
             if (response.isSuccessful) {
