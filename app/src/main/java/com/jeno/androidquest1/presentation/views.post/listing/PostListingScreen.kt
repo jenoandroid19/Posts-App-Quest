@@ -33,7 +33,7 @@ fun PostListingScreen(
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         CommonHeader(
-            headerText = "Posts",
+            headerText = "Posts List",
             leadingIcon = R.drawable.close
         )
         if (state.showLoader.showLoader){

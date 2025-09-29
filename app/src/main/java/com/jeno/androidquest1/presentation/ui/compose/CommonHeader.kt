@@ -70,7 +70,7 @@ fun CommonHeader(
 @Composable
 fun ShowCommonHeaderPreview(){
     CommonHeader(
-        headerText = "Listing",
+        headerText = "Post Listing",
         leadingIcon = R.drawable.back_arrow
     )
 }
@@ -79,6 +79,6 @@ fun ShowCommonHeaderPreview(){
 @Composable
 fun ShowCommonHeaderPreview2(){
     CommonHeader(
-        headerText = "Listing",
+        headerText = "Post Listing",
     )
 }
